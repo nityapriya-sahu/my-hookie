@@ -27,6 +27,11 @@ const MasterLayout = () => {
             <li>
               <Link to="/pagination">Pagination</Link>
             </li>
+            <hr />
+            <h2 style={{ textAlign: "center" }}>All Hooks</h2>
+            <li>
+              <Link to="/use-state">useState</Link>
+            </li>
           </ul>
         </aside>
 

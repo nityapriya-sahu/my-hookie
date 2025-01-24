@@ -1,0 +1,26 @@
+.main1_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.use_state1_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.use_state1_container button {
+  padding: 5px;
+  width: 80px;
+  border-radius: 5px;
+  border: 2px solid rgb(53, 236, 53);
+  cursor: pointer;
+}
+.use_state1_container button:hover {
+  background-color: rgb(53, 236, 53);
+  color: white;
+  font-weight: 700;
+  font-size: medium;
+  transition: 1s;
+}

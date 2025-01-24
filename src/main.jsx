@@ -15,6 +15,8 @@ import ModalDemo from "./components/ModalDemo";
 import FormDemo from "./components/FormDemo";
 import PaginationDemo from "./components/PaginationDemo";
 import SearchFilter from "./components/SearchFilter";
+// ...............................
+import UseStateComp from "./components/All Hooks/UseStateComp";
 
 const routers = createBrowserRouter([
   {
@@ -29,13 +31,15 @@ const routers = createBrowserRouter([
     element: <MasterLayout />,
     children: [
       { path: "/", element: <Counter /> },
-      { path: "/counter", element: <Counter /> },
+      { path: "counter", element: <Counter /> },
 
       { path: "todo", element: <Todo /> },
       { path: "modal", element: <ModalDemo /> },
       { path: "search-filter", element: <SearchFilter /> },
       { path: "form", element: <FormDemo /> },
       { path: "pagination", element: <PaginationDemo /> },
+      // .........................................
+      { path: "use-state", element: <UseStateComp /> },
     ],
   },
 ]);

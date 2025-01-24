@@ -32,6 +32,9 @@ const MasterLayout = () => {
             <li>
               <Link to="/use-state">useState</Link>
             </li>
+            <li>
+              <Link to="/use-effect">useEffect</Link>
+            </li>
           </ul>
         </aside>
 

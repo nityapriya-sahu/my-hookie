@@ -17,6 +17,7 @@ import PaginationDemo from "./components/PaginationDemo";
 import SearchFilter from "./components/SearchFilter";
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
+import UseEffectComp from "./components/All Hooks/UseEffectComp";
 
 const routers = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ const routers = createBrowserRouter([
       { path: "pagination", element: <PaginationDemo /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
+      { path: "use-effect", element: <UseEffectComp /> },
     ],
   },
 ]);

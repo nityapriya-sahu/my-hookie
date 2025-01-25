@@ -24,3 +24,7 @@
   font-size: medium;
   transition: 1s;
 }
+.counter_container {
+  display: flex;
+  gap: 10px;
+}

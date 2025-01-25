@@ -18,6 +18,8 @@ import SearchFilter from "./components/SearchFilter";
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
+import UseRefComp from "./components/All Hooks/UseRefComp";
+import UseMemo from "./components/All Hooks/USeMemo";
 
 const routers = createBrowserRouter([
   {
@@ -42,6 +44,8 @@ const routers = createBrowserRouter([
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
       { path: "use-effect", element: <UseEffectComp /> },
+      { path: "use-ref", element: <UseRefComp /> },
+      { path: "use-memo", element: <UseMemo /> },
     ],
   },
 ]);

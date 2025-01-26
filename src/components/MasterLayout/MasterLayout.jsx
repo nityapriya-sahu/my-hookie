@@ -41,6 +41,12 @@ const MasterLayout = () => {
             <li>
               <Link to="/use-memo">useMemo</Link>
             </li>
+            <li>
+              <Link to="/use-callback">useCallback</Link>
+            </li>
+            <li>
+              <Link to="/use-reducer">useReducer</Link>
+            </li>
           </ul>
         </aside>
 

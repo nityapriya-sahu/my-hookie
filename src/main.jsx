@@ -20,6 +20,8 @@ import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
 import UseRefComp from "./components/All Hooks/UseRefComp";
 import UseMemo from "./components/All Hooks/USeMemo";
+import UseCallback from "./components/All Hooks/USeCallback";
+import UseReducer from "./components/All Hooks/UseReducer";
 
 const routers = createBrowserRouter([
   {
@@ -46,6 +48,8 @@ const routers = createBrowserRouter([
       { path: "use-effect", element: <UseEffectComp /> },
       { path: "use-ref", element: <UseRefComp /> },
       { path: "use-memo", element: <UseMemo /> },
+      { path: "use-callback", element: <UseCallback /> },
+      { path: "use-reducer", element: <UseReducer /> },
     ],
   },
 ]);

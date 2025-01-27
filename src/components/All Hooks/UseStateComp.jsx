@@ -11,7 +11,7 @@ const UseStateComp = () => {
   const [counter, setCounter] = useState(0);
 
   const handleCarData = () => {
-    setCarData({ ...carData, carName: "Audi" });
+    setCarData({ ...carData, carName: "Mercedes" });
   };
   //   ------------------
   const handleIncrement = () => {

@@ -48,3 +48,24 @@
   font-weight: bold;
   cursor: pointer;
 }
+/* ------------- */
+.todo_main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.todo_first_container {
+  display: flex;
+  gap: 10px;
+}
+.todo_first_container input {
+  padding: 8px;
+  width: 500px;
+}
+.todo_data_container {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}

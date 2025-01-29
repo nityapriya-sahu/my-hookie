@@ -38,7 +38,7 @@
   gap: 10px;
 }
 .counter_main_container button {
-  width: 50px;
+  min-width: 50px;
   padding: 5px;
   border-radius: 4px;
   border: none;

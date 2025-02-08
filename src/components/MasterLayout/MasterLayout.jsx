@@ -25,6 +25,9 @@ const MasterLayout = () => {
               <Link to="/form">Form</Link>
             </li>
             <li>
+              <Link to="/parent-child">Parent-Child</Link>
+            </li>
+            <li>
               <Link to="/pagination">Pagination</Link>
             </li>
             <hr />

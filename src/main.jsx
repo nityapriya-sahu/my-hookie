@@ -15,6 +15,8 @@ import ModalDemo from "./components/ModalDemo";
 import FormDemo from "./components/FormDemo";
 import PaginationDemo from "./components/PaginationDemo";
 import SearchFilter from "./components/SearchFilter";
+import ParentComp from "./components/ParentChildProps/ParentComp";
+
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
@@ -42,6 +44,7 @@ const routers = createBrowserRouter([
       { path: "modal", element: <ModalDemo /> },
       { path: "search-filter", element: <SearchFilter /> },
       { path: "form", element: <FormDemo /> },
+      { path: "parent-child", element: <ParentComp /> },
       { path: "pagination", element: <PaginationDemo /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },

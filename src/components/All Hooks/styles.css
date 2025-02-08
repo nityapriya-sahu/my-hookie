@@ -79,3 +79,33 @@
 .search_Input {
   padding: 5px;
 }
+/* ------------- */
+
+.product_card_container {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.title_container {
+  text-align: center;
+}
+.pagination_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pagination_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination_box {
+  /* display: flex; */
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.active {
+  background-color: bisque;
+}

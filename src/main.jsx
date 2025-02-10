@@ -17,7 +17,8 @@ import PaginationDemo from "./components/PaginationDemo";
 import SearchFilter from "./components/SearchFilter";
 import ParentComp from "./components/ParentChildProps/ParentComp";
 import ConditionalRender from "./components/ConditionalRender";
-
+// ...............................
+import TabForm from "./components/TabForm/TabForm";
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
@@ -48,6 +49,8 @@ const routers = createBrowserRouter([
       { path: "parent-child", element: <ParentComp /> },
       { path: "pagination", element: <PaginationDemo /> },
       { path: "conditional-render", element: <ConditionalRender /> },
+      // .........................................
+      { path: "tab-form", element: <TabForm /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
       { path: "use-effect", element: <UseEffectComp /> },

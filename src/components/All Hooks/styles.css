@@ -109,3 +109,43 @@
 .active {
   background-color: bisque;
 }
+/* ======================== */
+
+.tab_container {
+  display: flex;
+  gap: 2px;
+}
+.each_tab {
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+.active_tab {
+  background-color: aquamarine;
+}
+.tab_body {
+  display: flex;
+  border: 3px double greenyellow;
+  padding: 20px;
+  height: 300px;
+}
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tab_button_container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.tab_btn {
+  padding: 10px;
+  font-weight: 600;
+  font-size: medium;
+  cursor: pointer;
+}
+.error_msg {
+  color: red;
+  font-weight: 600;
+}

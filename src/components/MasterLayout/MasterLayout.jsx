@@ -34,6 +34,10 @@ const MasterLayout = () => {
               <Link to="/conditional-render">Conditional Render</Link>
             </li>
             <hr />
+            <li>
+              <Link to="/tab-form">Tab Form</Link>
+            </li>
+            <hr />
             <h2 style={{ textAlign: "center" }}>All Hooks</h2>
             <li>
               <Link to="/use-state">useState</Link>

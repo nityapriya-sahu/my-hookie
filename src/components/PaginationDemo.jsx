@@ -17,6 +17,7 @@ const ProductCard = ({ image, title }) => {
 const PaginationDemo = () => {
   const [apiData, setApiData] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   //2: get no of products
   const totalProducts = apiData.length;
@@ -31,10 +32,17 @@ const PaginationDemo = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch("https://dummyjson.com/products?limit=500");
-    const jsonData = await data.json();
-    console.log(jsonData.products);
-    setApiData(jsonData.products);
+    setLoading(true);
+    try {
+      const data = await fetch("https://dummyjson.com/products?limit=500");
+      const jsonData = await data.json();
+      console.log(jsonData.products);
+      setApiData(jsonData.products);
+    } catch (err) {
+      console.error("Failed to fetch data!", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handlePageChange = (n) => {
@@ -49,6 +57,10 @@ const PaginationDemo = () => {
   const goToNextPage = () => {
     setCurrentPage((prev) => prev + 1);
   };
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
 
   return !apiData.length ? (
     <h1>No data found</h1>

@@ -16,6 +16,7 @@ import FormDemo from "./components/FormDemo";
 import PaginationDemo from "./components/PaginationDemo";
 import SearchFilter from "./components/SearchFilter";
 import ParentComp from "./components/ParentChildProps/ParentComp";
+import ConditionalRender from "./components/ConditionalRender";
 
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
@@ -46,6 +47,7 @@ const routers = createBrowserRouter([
       { path: "form", element: <FormDemo /> },
       { path: "parent-child", element: <ParentComp /> },
       { path: "pagination", element: <PaginationDemo /> },
+      { path: "conditional-render", element: <ConditionalRender /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
       { path: "use-effect", element: <UseEffectComp /> },

@@ -37,6 +37,9 @@ const MasterLayout = () => {
             <li>
               <Link to="/tab-form">Tab Form</Link>
             </li>
+            <li>
+              <Link to="/auto-search">Auto Search</Link>
+            </li>
             <hr />
             <h2 style={{ textAlign: "center" }}>All Hooks</h2>
             <li>

@@ -25,8 +25,8 @@
   background-color: #f4f4f4;
   padding: 20px;
   border-right: 1px solid #ddd;
-  /* overflow-y: auto; */
-  /* height: calc(100vh - 50px); */
+  overflow-y: auto;
+  height: calc(100vh - 50px);
 }
 
 .sidebar ul {

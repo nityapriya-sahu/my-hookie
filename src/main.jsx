@@ -19,6 +19,7 @@ import ParentComp from "./components/ParentChildProps/ParentComp";
 import ConditionalRender from "./components/ConditionalRender";
 // ...............................
 import TabForm from "./components/TabForm/TabForm";
+import AutoSearch from "./components/AutoSearch/AutoSearch";
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
@@ -51,6 +52,7 @@ const routers = createBrowserRouter([
       { path: "conditional-render", element: <ConditionalRender /> },
       // .........................................
       { path: "tab-form", element: <TabForm /> },
+      { path: "auto-search", element: <AutoSearch /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
       { path: "use-effect", element: <UseEffectComp /> },

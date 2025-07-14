@@ -16,28 +16,35 @@ const ProductCard = ({ image, title }) => {
 
 const PaginationDemo = () => {
   const [apiData, setApiData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [totalProducts, setTotalProducts] = useState(0);
 
   //2: get no of products
-  const totalProducts = apiData.length;
+  // let totalProducts = 0;
   //3: Calculate no.of pages
-  const noOfPages = Math.ceil(totalProducts / PAGE_SIZE); //it will give decimal value so wrap it with ceil()
+  // const noOfPages = Math.ceil(totalProducts / PAGE_SIZE); //it will give decimal value so wrap it with ceil()
 
   // for add dynamic value to slice() to showing data
-  const start = currentPage * PAGE_SIZE;
-  const end = start + PAGE_SIZE;
+  // const start = currentPage * PAGE_SIZE;
+  // const end = start + PAGE_SIZE;
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [currentPage]);
   const fetchData = async () => {
     setLoading(true);
     try {
-      const data = await fetch("https://dummyjson.com/products?limit=500");
+      const data = await fetch(
+        `https://dummyjson.com/products?skip=${
+          (currentPage - 1) * PAGE_SIZE
+        }&limit=${PAGE_SIZE}`
+      );
       const jsonData = await data.json();
       console.log(jsonData.products);
+      // totalProducts = jsonData.total;
       setApiData(jsonData.products);
+      setTotalProducts(jsonData.total);
     } catch (err) {
       console.error("Failed to fetch data!", err);
     } finally {
@@ -47,7 +54,7 @@ const PaginationDemo = () => {
 
   const handlePageChange = (n) => {
     // console.log(n, "NNNNNNN");
-    setCurrentPage(n);
+    setCurrentPage(n + 1);
   };
 
   const goToPrevPage = () => {
@@ -62,7 +69,7 @@ const PaginationDemo = () => {
     return <h1>Loading...</h1>;
   }
 
-  return !apiData.length ? (
+  return !totalProducts ? (
     <h1>No data found</h1>
   ) : (
     <div>
@@ -71,29 +78,31 @@ const PaginationDemo = () => {
         <button
           className="pagination_box"
           onClick={() => goToPrevPage()}
-          disabled={currentPage === 0}
+          disabled={currentPage === 1}
         >
           ⬅️
         </button>
-        {[...Array(noOfPages).keys()].map((n) => (
+        {[...Array(Math.ceil(totalProducts / PAGE_SIZE)).keys()].map((n) => (
           <button
-            key={n}
-            className={`pagination_box ${currentPage === n ? "active" : ""} `}
+            key={n + 1}
+            className={`pagination_box ${
+              currentPage === n + 1 ? "active" : ""
+            } `}
             onClick={() => handlePageChange(n)}
           >
-            {n}
+            {n + 1}
           </button>
         ))}
         <button
           className="pagination_box"
           onClick={() => goToNextPage()}
-          disabled={currentPage === noOfPages - 1}
+          disabled={currentPage === Math.ceil(totalProducts / PAGE_SIZE)}
         >
           ➡️
         </button>
       </div>
       <div className="pagination_container">
-        {apiData.slice(start, end).map((item) => (
+        {apiData.map((item) => (
           <ProductCard
             image={item.thumbnail}
             title={item.title}

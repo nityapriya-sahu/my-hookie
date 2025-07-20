@@ -33,6 +33,8 @@ const ProgressBar = () => {
   return (
     <div className="progress_container">
       <h1>Progress Bar</h1>
+      {/* <ProgressBarComponent progress={70} /> */}
+
       {bars.map((nos) => (
         <ProgressBarComponent key={nos} progress={nos} />
       ))}

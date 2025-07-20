@@ -169,3 +169,21 @@
   max-height: 200px;
   overflow-y: scroll;
 }
+
+/* =========================== */
+.progress_container {
+  text-align: center;
+}
+.outer {
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.inner {
+  background: green;
+  color: aliceblue;
+  text-align: right;
+  padding-right: 10px;
+  transition: 0.5s ease-in;
+}

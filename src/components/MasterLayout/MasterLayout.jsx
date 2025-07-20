@@ -40,6 +40,12 @@ const MasterLayout = () => {
             <li>
               <Link to="/auto-search">Auto Search</Link>
             </li>
+            <li>
+              <Link to="/file-explorer">File Explorer</Link>
+            </li>
+            <li>
+              <Link to="/progress-bar">Progress Bar</Link>
+            </li>
             <hr />
             <h2 style={{ textAlign: "center" }}>All Hooks</h2>
             <li>

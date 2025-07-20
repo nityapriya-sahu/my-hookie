@@ -20,6 +20,8 @@ import ConditionalRender from "./components/ConditionalRender";
 // ...............................
 import TabForm from "./components/TabForm/TabForm";
 import AutoSearch from "./components/AutoSearch/AutoSearch";
+import FileExplorer from "./components/FileExplorer/MainFolder";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
 import UseEffectComp from "./components/All Hooks/UseEffectComp";
@@ -53,6 +55,8 @@ const routers = createBrowserRouter([
       // .........................................
       { path: "tab-form", element: <TabForm /> },
       { path: "auto-search", element: <AutoSearch /> },
+      { path: "file-explorer", element: <FileExplorer /> },
+      { path: "progress-bar", element: <ProgressBar /> },
       // .........................................
       { path: "use-state", element: <UseStateComp /> },
       { path: "use-effect", element: <UseEffectComp /> },

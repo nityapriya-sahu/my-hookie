@@ -14,6 +14,8 @@ const AutoSearch = () => {
   }, [input]);
   const fetchData = async () => {
     if (cache[input]) {
+      console.log("CACHE RETURNED", input);
+
       setResult(cache[input]);
       return;
     }

@@ -49,6 +49,9 @@ const MasterLayout = () => {
             <li>
               <Link to="/validate-otp">Validate OTP</Link>
             </li>
+            <li>
+              <Link to="/nested-checkbox">Nested Checkbox</Link>
+            </li>
             <hr />
             <h2 style={{ textAlign: "center" }}>All Hooks</h2>
             <li>

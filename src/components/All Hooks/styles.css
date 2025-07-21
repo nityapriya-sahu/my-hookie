@@ -199,3 +199,8 @@
   font-size: xx-large;
   text-align: center;
 }
+
+.parent_div {
+  padding-left: 20px;
+  margin-top: 10px;
+}

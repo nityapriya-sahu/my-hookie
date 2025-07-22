@@ -24,6 +24,7 @@ import FileExplorer from "./components/FileExplorer/MainFolder";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import OtpInput from "./components/OtpInput/OtpInput";
 import NestedCheckbox from "./components/NestedCheckbox/NestedCheckbox";
+import ChipsInput from "./components/ChipsInput/ChipsInput";
 
 // ...............................
 import UseStateComp from "./components/All Hooks/UseStateComp";
@@ -62,6 +63,7 @@ const routers = createBrowserRouter([
       { path: "progress-bar", element: <ProgressBar /> },
       { path: "validate-otp", element: <OtpInput /> },
       { path: "nested-checkbox", element: <NestedCheckbox /> },
+      { path: "chips-input", element: <ChipsInput /> },
 
       // .........................................
       { path: "use-state", element: <UseStateComp /> },

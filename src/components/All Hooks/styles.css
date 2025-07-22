@@ -199,8 +199,27 @@
   font-size: xx-large;
   text-align: center;
 }
+/* =========================== */
 
 .parent_div {
   padding-left: 20px;
   margin-top: 10px;
+}
+/* =========================== */
+
+.input_container {
+  text-align: center;
+  margin-top: 20px;
+}
+.input_box {
+  height: 20px;
+  width: 50%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: medium;
+}
+.chips_container {
+  background: rgb(234, 192, 192);
+  margin: 5px;
+  padding: 10px;
 }

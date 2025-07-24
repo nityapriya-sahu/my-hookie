@@ -14,9 +14,12 @@ const ChipsInput = () => {
 
   const handleDelete = (index) => {
     //to delete something from array we need to first create a copy of that array then delete from copieed array
-    const copyChips = [...chips];
-    copyChips.splice(index, 1);
-    setChips(copyChips);
+    // const copyChips = [...chips];
+    // copyChips.splice(index, 1);
+    // setChips(copyChips);
+
+    //or in one line we can delete
+    setChips(chips.filter((_, i) => i !== index));
   };
   return (
     <div>

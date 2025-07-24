@@ -223,3 +223,8 @@
   margin: 5px;
   padding: 10px;
 }
+/* =========================== */
+
+.strike_through {
+  text-decoration: line-through;
+}

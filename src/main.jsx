@@ -33,6 +33,7 @@ import UseRefComp from "./components/All Hooks/UseRefComp";
 import UseMemo from "./components/All Hooks/USeMemo";
 import UseCallback from "./components/All Hooks/USeCallback";
 import UseReducer from "./components/All Hooks/UseReducer";
+import Accordion from "./components/Accordion/Accordion";
 
 const routers = createBrowserRouter([
   {
@@ -64,6 +65,7 @@ const routers = createBrowserRouter([
       { path: "validate-otp", element: <OtpInput /> },
       { path: "nested-checkbox", element: <NestedCheckbox /> },
       { path: "chips-input", element: <ChipsInput /> },
+      { path: "accordion", element: <Accordion /> },
 
       // .........................................
       { path: "use-state", element: <UseStateComp /> },

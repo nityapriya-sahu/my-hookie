@@ -55,6 +55,9 @@ const MasterLayout = () => {
             <li>
               <Link to="/chips-input">Chips Input</Link>
             </li>
+            <li>
+              <Link to="/accordion">Accordion</Link>
+            </li>
             <hr />
             <h2 style={{ textAlign: "center" }}>All Hooks</h2>
             <li>

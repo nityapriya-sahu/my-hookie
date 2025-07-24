@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Basic of HTML",
+    "message": "HTML stands for Hyper Text Markup Language · HTML is the standard markup language for creating Web pages."
+  },
+  {
+    "title": "Basic of CSS",
+    "message": "CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes."
+  },
+  {
+    "title": "Basic of Javascript",
+    "message": "JavaScript is a versatile, lightweight scripting language primarily known for enabling interactive and dynamic content on websites. It is one of the three core technologies of the World Wide Web, alongside HTML (for structure) and CSS (for styling)."
+  },
+  {
+    "title": "Basic of React JS",
+    "message": "React is a JavaScript library for building user interfaces. React is used to build single-page applications. React allows us to create reusable UI components."
+  },
+  {
+    "title": "Basic of Node JS",
+    "message": "Node.js is a free, open source tool that lets you run JavaScript outside the web browser. With Node.js, you can build fast and scalable applications."
+  },
+  {
+    "title": "Basic of React Native",
+    "message": "To understand the basic structure of a React Native app, you need to understand some of the basic React concepts, like JSX, components, state, and props."
+  }
+]

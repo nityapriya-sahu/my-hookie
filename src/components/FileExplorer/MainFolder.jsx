@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import json from "./data.json";
 
-//AGAIN REVIEW AND DO IT AGAIN. ALL WRONG IN THIS CODE, (Code is breaking)
 //Watch video again
-const List = ({ list, addNodeToList }) => {
+const List = ({ list, addNodeToList, deleteNodeFromList }) => {
   const [isExpanded, setIsExpanded] = useState({});
   return (
     <div style={{ paddingLeft: "10px" }}>
@@ -26,8 +25,14 @@ const List = ({ list, addNodeToList }) => {
             <button onClick={() => addNodeToList(node.id)}>ADD</button>
           )}
 
+          <button onClick={() => deleteNodeFromList(node.id)}>DELETE</button>
+
           {isExpanded?.[node.name] && node?.children && (
-            <List list={node.children} />
+            <List
+              list={node.children}
+              addNodeToList={addNodeToList}
+              deleteNodeFromList={deleteNodeFromList}
+            />
           )}
         </div>
       ))}
@@ -48,7 +53,12 @@ const MainFolder = () => {
             ...node,
             children: [
               ...node.children,
-              { id: "123", name: name, isFolder: true, children: [] },
+              {
+                id: Date.now().toString(),
+                name: name,
+                isFolder: true,
+                children: [],
+              },
             ],
           };
         }
@@ -57,16 +67,38 @@ const MainFolder = () => {
             ...node,
             children: updateTree(node.children),
           };
-          return node;
         }
+        return node;
       });
     };
+    setData((prev) => updateTree(prev));
+  };
+
+  const deleteNodeFromList = (itemId) => {
+    const updateTree = (list) => {
+      return list
+        .filter((node) => node.id !== itemId)
+        .map((node) => {
+          if (node.children) {
+            return {
+              ...node,
+              children: updateTree(node.children),
+            };
+          }
+          return node;
+        });
+    };
+
     setData((prev) => updateTree(prev));
   };
   return (
     <div>
       <h1>File Explorer / VSCode Sidebar</h1>
-      <List list={data} addNodeToList={addNodeToList} />
+      <List
+        list={data}
+        addNodeToList={addNodeToList}
+        deleteNodeFromList={deleteNodeFromList}
+      />
     </div>
   );
 };
